@@ -10,9 +10,16 @@
 
 <style scoped>
 .header {
-    background-color: #f8f8f8;
-    padding: 20px;
+    background-color: #ffffff;
+    padding: 28px 24px 18px;
     text-align: center;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #eef2f7;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #0f172a;
+    letter-spacing: -0.02em;
 }
 </style>

@@ -71,47 +71,85 @@
 <style scoped>
 .home-page {
     display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 24px;
+    background: #f3f6fb;
+    min-height: 100vh;
 }
 .main-content {
     display: flex;
     flex-direction: column;
     flex: 1;
+    min-width: 0;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+    overflow: hidden;
 }
 
 .search-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 12px;
-    padding: 20px;
+    gap: 16px;
+    padding: 24px;
     flex-wrap: wrap;
+    border-bottom: 1px solid #eef2f7;
+    background: #ffffff;
 }
 
 .search-container input {
-    width: min(100%, 380px);
-    padding: 12px 16px;
-    border: 1px solid #ccc;
+    flex: 1 1 320px;
+    min-width: 220px;
+    max-width: 520px;
+    padding: 14px 18px;
+    border: 1px solid #d2dae8;
     border-radius: 999px;
     font-size: 16px;
     outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .search-container input:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.12);
+    border-color: #2563eb;
+    box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.12);
 }
 
 .result-count {
-    color: #555;
+    color: #475569;
     font-size: 14px;
+    min-width: 160px;
 }
 
 .product-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    padding-top: 24px;
+    width: 100%;
+}
+
+@media (max-width: 980px) {
+    .home-page {
+        flex-direction: column;
+        padding: 16px;
+    }
+    .main-content {
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .search-container {
+        justify-content: stretch;
+        align-items: stretch;
+    }
+    .result-count {
+        width: 100%;
+        text-align: left;
+        margin-top: 10px;
+    }
 }
 
 </style>
